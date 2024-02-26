@@ -1,0 +1,188 @@
+@font-face {
+    font-family: MadaniBold;
+    src: url(../media/fonts/MadaniArabicBold.ttf);
+}
+
+@font-face {
+    font-family: SofiaInline;
+    src: url(../media/fonts/SofiaRoughBlackInline.otf);
+}
+
+* {
+    outline: none;
+    user-select: none;
+}
+  
+body {
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+    min-height: 100vh;
+    max-width: 100%;
+}
+
+.notify_container {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30%;
+    height: 10%;
+    background: rgba( 47, 47, 47, 0.55 );
+    /* background-color: rgba(23, 23, 23, 0.878); */
+    border-top: none;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    text-align: center; /* Horizontale Zentrierung für den Text */
+    box-shadow: 0 0 5px 0 red;
+}
+
+.jobname {
+    position: fixed;
+    /* top: -25px; */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+}
+
+.job_name{
+    font-size: 15px;
+    font-family: MadaniBold;
+    font-weight: 400;
+    letter-spacing: 2px;
+    color: white; 
+}
+
+.vertical_line {
+    position: absolute;
+    margin-top: 1%;
+    height: 0%;
+    width: 96%;
+    border-left: 1px solid black;
+    margin-left: 2%; /* Abstand zur linken Seite des Textes */
+    border-radius: 50px;
+}
+
+.title {
+    position: absolute;
+    top: 43%;
+    left: 3%;
+    color: rgb(255, 255, 255);
+    font-size: 40px;
+    display: inline-block;
+    animation: swing 1s infinite;
+}
+
+.text {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 79%;
+    color: white;
+    font-family: SofiaInline;
+    font-size: 15px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.loading-bar {
+    width: 95%;
+    height: 5px;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    overflow: hidden;
+    background: rgba(47, 47, 47, 0); /* Gelb mit Transparenz */
+    border-radius: 10px;
+}
+
+.progress {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 174, 194, 0.753); /* Schwarze Farbe für den Fortschritt */
+    animation: progressAnimation 5s linear infinite;
+    border-radius: 10px;
+}
+
+@keyframes progressAnimation {
+    from {
+        width: 100%;
+    }
+    to {
+        width: 0%;
+    }
+}
+
+
+@keyframes swing {
+    0% {
+        transform: rotate(0deg);
+        transform-origin: center top;
+        color: #FFD700; /* Gold */
+    }
+    10% {
+        transform: rotate(-5deg);
+        transform-origin: center top;
+        color: #EBC951; /* Gold mit leichter Variation */
+    }
+    20% {
+        transform: rotate(3deg);
+        transform-origin: center top;
+        color: #FFD700; /* Zurück zu Gold */
+    }
+    30% {
+        transform: rotate(-2deg);
+        transform-origin: center top;
+        color: #EBC951; /* Gold mit leichter Variation */
+    }
+    40% {
+        transform: rotate(1deg);
+        transform-origin: center top;
+        color: #FFD700; /* Zurück zu Gold */
+    }
+    50% {
+        transform: rotate(0deg);
+        transform-origin: center top;
+        color: #EBC951; /* Gold mit leichter Variation */
+    }
+    60% {
+        transform: rotate(-1deg);
+        transform-origin: center top;
+        color: #FFD700; /* Zurück zu Gold */
+    }
+    70% {
+        transform: rotate(2deg);
+        transform-origin: center top;
+        color: #EBC951; /* Gold mit leichter Variation */
+    }
+    80% {
+        transform: rotate(-3deg);
+        transform-origin: center top;
+        color: #FFD700; /* Zurück zu Gold */
+    }
+    90% {
+        transform: rotate(5deg);
+        transform-origin: center top;
+        color: #EBC951; /* Gold mit leichter Variation */
+    }
+    100% {
+        transform: rotate(0deg);
+        transform-origin: center top;
+        color: #FFD700; /* Zurück zu Gold */
+    }
+}
+
+@keyframes pulse {
+    0% {
+      box-shadow: inset 0 0 10px 0 rgba(var(--nui-color-rgb), 0.5);
+    }
+    50% {
+      box-shadow: inset 0 0 20px 0 rgba(var(--nui-color-rgb), 0.7);
+    }
+    100% {
+      box-shadow: inset 0 0 10px 0 rgba(var(--nui-color-rgb), 0.5);
+    }
+  }
+  
